@@ -1,0 +1,16 @@
+<div class="layoutImage">
+  <img src={{this.imageSrc}} alt="Profile picture">
+  <p>{{this.username}}</p>
+
+</div>
+
+<form (onsubmit)="changeImage()">
+  <div class="form-group">
+      <label for="file">Choose File</label>
+      <input type="file"
+             id="file"
+             (change)="handleFileInput($event.target)">
+
+  </div>
+  <button type="button" name="button" (click)="changeImage()">Submit</button>
+</form>
