@@ -1,0 +1,11 @@
+<div class="grid-container">
+  <div class="grid-item" *ngFor="let item of eventsName; let i = index">
+    <img class= "image" src={{item.urlImage}} alt="">
+    <p>{{item.eventsName}}</p>
+    <p>Start month: {{item.monthEvent}}</p>
+    <p>Start day: {{item.dayEvent}}</p>
+    <button type="button" name="button" (click)="showModal(i)">Details</button>
+  </div>
+
+</div>
+<modal [showEvents] = "detaliiEveniment" #child></modal>
